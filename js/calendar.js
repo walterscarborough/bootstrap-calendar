@@ -5,7 +5,7 @@
  *
  * User: Sergey Romanov <serg4172@mail.ru>
  */
-
+'use strict';
 
 Date.prototype.getWeek = function() {
 	var onejan = new Date(this.getFullYear(), 0, 1);
@@ -38,7 +38,6 @@ if(!String.prototype.formatNum) {
 
 (function($) {
 
-    'use strict';
 
 	var defaults = {
 		// Width of the calendar
@@ -64,7 +63,7 @@ if(!String.prototype.formatNum) {
 		// /component/bootstrap-calendar/tmpls/
 		// or absolute
 		// http://localhost/component/bootstrap-calendar/tmpls/
-		tmpl_path:          '/tmpls', //'/bower_components/bootstrap-calendar/tmpls/',
+		tmpl_path:          '/tmpls',
 		tmpl_cache:         true,
 		classes:            {
 			months: {
