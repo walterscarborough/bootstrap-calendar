@@ -913,14 +913,17 @@ if(!String.prototype.formatNum) {
 
 		$('*[data-toggle="tooltip"]').tooltip({container: 'body'});
 
+        // Walter NOTE: I've disabled this so that the event submenu will
+        // slide out automatically when a date number is clicked on in the
+        // month view.
+/*
 		$('*[data-cal-date]').click(function() {
-            //console.log("click 2");
 			var view = $(this).data('cal-view');
 			self.options.day = $(this).data('cal-date');
 			self.view(view);
 		});
+*/
 		$('.cal-cell').dblclick(function() {
-            //console.log("click 3");
 			var view = $('[data-cal-date]', this).data('cal-view');
 			self.options.day = $('[data-cal-date]', this).data('cal-date');
 			self.view(view);
@@ -960,8 +963,6 @@ if(!String.prototype.formatNum) {
 		$('a[data-event-id]', this.context).on('click', function(event) {
 			event.preventDefault();
 			event.stopPropagation();
-
-            //console.log("click 4");
 
 			var url = $(this).attr('href');
 			var id = $(this).data("event-id");
